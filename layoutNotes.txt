@@ -1,0 +1,78 @@
+WaveTrails Tk GUI Tree Structure
+Master Root
+	- Master Frame (r=0, c=0, sticky=nsew)
+		- Top Frame (for display & buttons) (r=0, c=0)
+			- Nested Frame (to display output frames stacked on top of each other)
+				- (r=1, c=0)
+				- Site Frame (for tables per site)
+					- Display Frame (for tables) (r=0, c=0)
+						- Display Canvas (r=0, c=0)
+							- Table Frame
+						- Vscroll (r=0, c=1, rs=2)
+						- Hscroll (r=1, c=0)
+					- Draw Frame/Canvas (r=1, c=0)
+						- To draw bubble maps
+					- Control Frame (for buttons, pulldowns) (r=0, c=1)
+						- Buttons
+						- ListBoxes
+				- Map Frame
+					- Display Frame (for tables) (r=0, c=0)
+						- Display Canvas (r=0, c=0)
+							- Table Frame
+						- Vscroll (r=0, c=1, rs=2)
+						- Hscroll (r=1, c=0)
+					- Control Frame (for buttons, pulldowns) (r=0, c=1)
+						- Buttons
+						- ListBoxes
+				- Stats Frame
+					- Display Frame (for tables) (r=0, c=0)
+						- Display Canvas (r=0, c=0)
+							- Table Frame
+						- Vscroll (r=0, c=1, rs=2)
+						- Hscroll (r=1, c=0)
+					- Control Frame (for buttons, pulldowns) (r=0, c=1)
+						- Buttons
+						- ListBoxes
+			- Header Frame (to display nested frame buttons, to allow to switch stacked frame)
+				- (r=0, c=0)
+		- Bottom Frame (for logging) (r=1, c=0)
+			- Log Canvas
+				- Log Frame
+					- Labels
+			- Vscroll (r=0, c=1, rs=2)
+			- Hscroll (r=1, c=0)
+		
+WaveTrails TkGUI Menu Tree Structure
+MenuBar
+	- MainMenu (File)
+		- OpenFile
+			- Needs to know file type
+			- e.g. ReadWLEN, ReadCPS, etc
+			- do this via sub-menu?
+		- Save??
+			- Save what? the table? current screen data?
+		- Exit
+	- SiteMenu (Find Services)
+		- Find per Site
+		- Find per Lambda
+		- Save Table??
+	- MapMenu (Mapping)
+		- Build Map
+		- Trim Map
+		- Export Map
+		- Save Map??
+	- StatsMenu (Stats)
+		- Market Stats
+		- Site List
+		- Available Wavelength List
+	- Support (Support)
+		- Write Log
+		- Clear Log
+		- About
+		- OpenHelpFile
+		- OpenHelpDiagram
+		
+		
+https://stackoverflow.com/questions/3819354/in-tkinter-is-there-any-way-to-make-a-widget-not-visible/5928294#5928294
+https://stackoverflow.com/questions/10267465/showing-and-hiding-widgets
+

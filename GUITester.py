@@ -15,13 +15,9 @@
 # ===============================================================================
 
 from datetime import datetime
-import logging
 import os
 import random
-import threading
-import time
 import tkinter as tk
-import tkinter.scrolledtext as ScrolledText
 from tkinter.filedialog import askopenfilename
 
 
@@ -95,6 +91,7 @@ class createTkGUI(tk.Tk):
     # create callback functions
     def closeTkGUI(self):
         self.destroy()
+        exit()
 
     def openFile(self, filext='*.txt', prompt='Select File'):
         lenFileXt = len(filext) - 1
